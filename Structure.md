@@ -4,11 +4,12 @@
 
 ## (table) Cars
 
-- id                  BINGINT PRIMARY KEY UNIQUE NOTNULL 
+- id                  BINGINT PRIMARY KEY AUTOINCREMENT UNIQUE NOTNULL 
 - name                VARCHAR(50) NOTNULL
-- company             VARCHAR(50) NOTNULL
-- model               VARCHAR(255) NOTNULL <!-- tipo di modello: utilitaria | monovolume | suv | ecc..  -->
+- company             VARCHAR(50) NOTNULL INDEX
+- model               VARCHAR(255) NOTNULL INDEX <!-- tipo di modello: utilitaria | monovolume | suv | ecc..  -->
 - peso                MEDIUMINT NULL
+- prezzo              DECIMAL(8,2)
 - cilindrata          MEDIUMINT NULL
 - dimensioni          VARCHAR(20) NULL
 - porte               TINYINT NULL
